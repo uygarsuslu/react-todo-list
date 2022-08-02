@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	color: rgb(53, 224, 96);
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+	font-weight: 300;
+	background: linear-gradient(
+    90deg,
+    rgba(48, 16, 255, .9) 0%,
+    rgba(100, 115, 255, .8) 100%
+  );
+} 
+
+h1 {
+	font-size: 33px;
+	position: absolute;
+	top: -65px;
+	width: 100%;
+	font-size: 80px;
+	font-weight: 100;
+	text-align: center;
+	color: #ffffff;
+}
+
+.todoapp {
+	border-radius: 10px;
+  	padding-bottom: 32px;
+	margin: 130px 0 40px 0;
+	position: relative;
+}
