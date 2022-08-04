@@ -7,11 +7,13 @@ import {
 import { useTodo } from "../../../contexts/TodoContext";
 
 function Item({ todo }) {
-  const { toggleTodo } = useTodo();
+  const { toggleTodo, deleteTodo } = useTodo();
 
   const onClick = (id) => toggleTodo(id);
 
   const Icon = todo.completed ? AiOutlineCheckCircle : AiOutlineMinusCircle;
+
+  const onDelete = (id) => deleteTodo(id);
 
   return (
     <li key={todo.id} className={todo.completed ? "completed" : ""}>
@@ -28,7 +30,10 @@ function Item({ todo }) {
           }}
         />
         <label>{todo.text}</label>
-        <AiOutlineCloseCircle className="destroy" />
+        <AiOutlineCloseCircle
+          className="delete"
+          onClick={() => onDelete(todo.id)}
+        />
       </div>
     </li>
   );
