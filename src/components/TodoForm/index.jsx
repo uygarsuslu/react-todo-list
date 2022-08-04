@@ -1,15 +1,18 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import validationSchema from "./validations";
+import { useTodo } from "../../contexts/TodoContext";
 
 function TodoForm() {
+  const { addTodo } = useTodo();
+
   return (
     <Formik
       initialValues={{
         text: "",
       }}
       onSubmit={(values, bag) => {
-        console.log(values);
+        addTodo(values.text);
 
         bag.resetForm();
       }}
