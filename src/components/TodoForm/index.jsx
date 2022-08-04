@@ -1,11 +1,31 @@
 import React from "react";
+import { Formik, Field, Form } from "formik";
+import validationSchema from "./validations";
 
-function index() {
+function TodoForm() {
   return (
-    <form>
-      <input class="new-todo" placeholder="add a todo" autoFocus />
-    </form>
+    <Formik
+      initialValues={{
+        text: "",
+      }}
+      onSubmit={(values, bag) => {
+        console.log(values);
+
+        bag.resetForm();
+      }}
+      validationSchema={validationSchema}
+    >
+      <Form>
+        <Field
+          className="new-todo"
+          placeholder="add a todo"
+          autoFocus
+          id="text"
+          name="text"
+        />
+      </Form>
+    </Formik>
   );
 }
 
-export default index;
+export default TodoForm;
