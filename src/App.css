@@ -133,3 +133,72 @@ h1 {
 .todo-list li .destroy:hover {
 	color: rgb(232, 85, 0);
 }
+
+.footer {
+	color: rgb(232, 85, 0, 0.7);
+	padding: 10px 20px;
+	height: 20px;
+	text-align:start;
+	border-top: 1px solid #e6e6e6;
+}
+
+.footer:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	overflow: hidden;
+}
+
+.filters {
+	margin: 0;
+	padding: 0 15px;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+.filters li {
+	display: inline;
+}
+
+.filters li a {
+	color: inherit;
+	margin: 3px;
+	padding: 3px 10px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.filters li a:hover {
+	color:rgb(232, 85, 0);
+	border-color: rgb(232, 85, 0);
+}
+
+.filters li a.selected {
+	color:rgb(232, 85, 0);
+	border-color: rgb(232, 85, 0);
+}
+
+.clear-completed,
+.clear-completed:active {
+	color:rgb(232, 85, 0, 0.7);
+	padding: 0 5px;
+	float: right;
+	position: relative;
+	line-height: 20px;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid rgb(232, 85, 0, 0.7);
+	border-radius: 3px;
+}
+
+.clear-completed:hover {
+	color:rgb(232, 85, 0);
+	border-color: rgb(232, 85, 0);
+}
